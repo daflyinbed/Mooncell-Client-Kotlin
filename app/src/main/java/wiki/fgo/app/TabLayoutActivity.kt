@@ -13,7 +13,7 @@ class TabLayoutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tab_layout_activity)
 
-        toolBarLayout.title = "Tab layout"
+        toolBarLayout.title = "对比模式"
 
         val pageAdapter = PageAdapter(supportFragmentManager)
         val bundle = Bundle()
@@ -21,7 +21,7 @@ class TabLayoutActivity : AppCompatActivity() {
 
         // create fragments from 0 to 3
         for (i in 0 until 4) {
-            pageAdapter.add(PageFragment.newInstance(i), "Tab $i", bundle)
+            pageAdapter.add(PageFragment.newInstance(i), "对比栏$i", bundle)
         }
 
         view_pager.adapter = pageAdapter

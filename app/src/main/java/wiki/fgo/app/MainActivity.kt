@@ -146,7 +146,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         R.id.action_diff -> {
-
+            val intent = Intent(this, TabLayoutActivity::class.java)
+            startActivity(intent)
             true
         }
 

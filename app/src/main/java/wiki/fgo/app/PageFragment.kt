@@ -1,13 +1,13 @@
 package wiki.fgo.app
 
+import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import wiki.fgo.app.McWebview.WebviewInit
+
 
 class PageFragment : Fragment() {
     override fun onCreateView(
@@ -18,7 +18,7 @@ class PageFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_page, container, false)
         val page = arguments?.getInt(PAGE_NUM)
         val cacheDir = arguments?.getString("cacheDirPath")
-
+        setHasOptionsMenu(true)
         val tvHello: WebView = view.findViewById(R.id.webView_replica)
 
         if (cacheDir != null) {
