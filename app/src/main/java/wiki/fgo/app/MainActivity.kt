@@ -63,8 +63,6 @@ import java.util.regex.Pattern
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    private var isHorizontal : Boolean = true
-
     private val sidebarFetchUrl =
         "https://fgo.wiki/api.php?action=parse&format=json&page=%E6%A8%A1%E6%9D%BF%3AMFSidebarAutoEvents/App&disablelimitreport=1"
 
@@ -193,10 +191,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.edit_menu, menu)
-        if (userName != null) {
-            if (menu != null) {
-                menu.findItem(R.id.action_notice).isVisible = true
-            }
+        if (userName != null && menu != null) {
+            menu.findItem(R.id.action_notice).isVisible = true
         }
         return true
     }
