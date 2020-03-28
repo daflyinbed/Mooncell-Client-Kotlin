@@ -145,6 +145,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             true
         }
 
+        R.id.action_diff -> {
+
+            true
+        }
+
         R.id.action_notice -> {
             webView.loadUrl("https://fgo.wiki/w/特殊:通知")
             true
